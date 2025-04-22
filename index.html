@@ -10,14 +10,74 @@
     <header>
       <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="index.html" class="nav-items active">Home</a></li>
-            <li><a href="about.html" class="nav-items">About me</a></li>
-            <li><a href="contact.html" class="nav-items">Contact me</a></li>
-
+          <li><a href="index.html" class="nav-items active">Home</a></li>
+          <li><a href="about.html" class="nav-items">About me</a></li>
+          <li><a href="contact.html" class="nav-items">Contact me</a></li>
         </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/elementor-placeholder-image.webp" alt="Image 1" />
+          </div>
+          <div class="carousel-item">
+            <img src="images/elementor-placeholder-image.webp" alt="Image 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="images/elementor-placeholder-image.webp" alt="Image 3" />
+          </div>
+        </div>
+
+        <button class="carousel-control prev">&#10094;</button>
+        <button class="carousel-control next">&#10095;</button>
+        <div class="carousel-indicators">
+          <span class="indicator active" data-slide-to="0"></span>
+          <span class="indicator" data-slide-to="1"></span>
+          <span class="indicator" data-slide-to="2"></span>
+        </div>
+      </div>
+
+      <h2 id="heading-projects">My projects</h2>
+      <section class="project-section">
+        <div class="card-container">
+          <div class="project-class">
+            <div class="card-image">
+              <img src="" alt="img1">
+            </div>
+            <div class="card-content">
+              <h3>Title</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi velit, minima placeat vitae rem quidem et delectus dolore. Maxime impedit repudiandae perferendis a incidunt numquam sunt praesentium porro itaque dicta.</p>
+              <button class="card-btn">View details</button>
+            </div>
+          </div>
+
+          <div class="project-class">
+            <div class="card-image">
+              <img src="" alt="img2">
+            </div>
+            <div class="card-content">
+              <h3>Title</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi velit, minima placeat vitae rem quidem et delectus dolore. Maxime impedit repudiandae perferendis a incidunt numquam sunt praesentium porro itaque dicta.</p>
+              <button class="card-btn">View details</button>
+            </div>
+          </div>
+
+          <div class="project-class">
+            <div class="card-image">
+              <img src="" alt="img3">
+            </div>
+            <div class="card-content">
+              <h3>Title</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi velit, minima placeat vitae rem quidem et delectus dolore. Maxime impedit repudiandae perferendis a incidunt numquam sunt praesentium porro itaque dicta.</p>
+              <button class="card-btn">View details</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>&copy; All rights reserved. Neal 2025</footer>
+    <script src="script.js"></script>
   </body>
 </html>
