@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Lucida Sans', sans-serif;
-  background-color: #A69080;
+  font-family: "Lucida Sans", sans-serif;
+  background-color: #a69080;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
 }
 html {
@@ -20,15 +20,19 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  border: 2px solid #865D36;
+  border: 2px solid #865d36;
+  z-index: 1000;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
   justify-content: center;
 }
+
 .nav-items {
-  color: #3E362E;
+  color: #3e362e;
+  float: left;
   padding: 15px 20px;
   text-decoration: none;
   text-transform: capitalize;
@@ -36,23 +40,30 @@ html {
   font-weight: 600;
   transition: transform 0.3s ease;
 }
+
 .nav-items:hover {
   transform: translateY(-2px);
 }
 main {
   flex: 1;
+  padding-top: 80px;
 }
 footer {
-  background-color: #c7ad92;
+  position: fixed;
+  background-color: #96795a;
   text-align: center;
-  padding: 5px;
+  color: #3e362e;
+  font-weight: bold;
+  padding: 10px;
   width: 100%;
+  height: 60px;
+  bottom: 0;
+  left: 0;
 }
 .active {
-  color: #865D36;
+  color: #865d36;
   transform: translateY(-2px);
   font-weight: bold;
-  text-decoration: underline;
   background-color: #d8c09d;
   border-radius: 10px;
 }
@@ -79,7 +90,7 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #3E362E;
+  background-color: #3e362e;
   color: white;
   padding: 10px 15px;
   cursor: pointer;
@@ -120,12 +131,14 @@ footer {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 30px;
 }
 .project-class {
   background-color: #d8c09d;
@@ -147,8 +160,8 @@ footer {
   border-radius: 5px;
   display: block;
 }
-.card-content{
-    padding: 10px;
+.card-content {
+  padding: 10px;
 }
 .card-content h5 {
   margin-top: 0;
@@ -159,14 +172,23 @@ footer {
   line-height: 1.6;
   margin-bottom: 20px;
 }
-.card-btn{
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
+.card-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.5s ease, color 0.3s ease,
+    box-shadow 0.7s ease-in-out;
+  bottom: 10px;
 }
 .card-btn:hover {
   background-color: #93785f;
   color: rgb(255, 255, 255);
+}
+.contact{
+  background-color: aqua;
+  padding: 30px;
+  bottom: 100px;
+  margin: 0 auto;
 }
