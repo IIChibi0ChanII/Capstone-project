@@ -36,3 +36,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Scroll Animation
+const scrollElements = document.querySelectorAll(".scroll-effect");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      } else {
+        entry.target.classList.remove("in-view");
+      }
+    });
+  },
+  {
+    threshold: 0.01, // Trigger when 0.01% of the element is visible
+  }
+);
+
+scrollElements.forEach((el) => observer.observe(el));

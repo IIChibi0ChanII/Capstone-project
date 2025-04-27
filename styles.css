@@ -2,26 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #333545;
 }
 body {
   font-family: "Lucida Sans", sans-serif;
-  background-color: #a69080;
+  background-color: #c3c3e6;
   display: flex;
-  flex-direction: row;
-  height: 100%;
+  flex-direction: column;
+  height: 100vh;
 }
 html {
   height: 100%;
 }
 .navbar {
-  background-color: #96795a;
-  overflow: hidden;
-  position: fixed;
+  position: fixed;  /* Keeps navbar at the top */
   top: 0;
   left: 0;
   width: 100%;
-  border: 2px solid #865d36;
-  z-index: 1000;
+  z-index: 1000;  /* Ensures it stays on top */
+  padding: 4px 10px;
+  background-color: #9E8ED0;
 }
 
 .nav-links {
@@ -46,25 +46,25 @@ html {
 }
 main {
   flex: 1;
-  padding-top: 80px;
+  padding-top: 50px;
 }
+
 footer {
-  position: fixed;
-  background-color: #96795a;
+  background-color: #9e8ed0;
   text-align: center;
-  color: #3e362e;
+  color: #333545;
   font-weight: bold;
   padding: 10px;
   width: 100%;
-  height: 60px;
+  height: fit-content;
   bottom: 0;
   left: 0;
 }
 .active {
-  color: #865d36;
+  color: #333545;
   transform: translateY(-2px);
-  font-weight: bold;
-  background-color: #d8c09d;
+  font-weight: bolder;
+  background-color: #8f73d8;
   border-radius: 10px;
 }
 .carousel {
@@ -72,9 +72,13 @@ footer {
   max-width: 800px;
   margin: auto;
   overflow: hidden;
+  margin-bottom: 40px;
+  margin: 10px auto;
+  border: 1px transparent;
+  border-radius: 10px;
 }
 .carousel-inner {
-  margin-top: 60px;
+  margin-top: 50px;
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
@@ -83,13 +87,15 @@ footer {
   box-sizing: border-box;
 }
 .carousel-item img {
+  border: 1px transparent;
+  border-radius: 10px;
   width: 100%;
   display: block;
 }
 .carousel-control {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  bottom: auto;
   background-color: #3e362e;
   color: white;
   padding: 10px 15px;
@@ -141,7 +147,7 @@ footer {
   margin-bottom: 30px;
 }
 .project-class {
-  background-color: #d8c09d;
+  background-color: #a293c7;
   border-radius: 10px;
   padding: 20px;
   width: 100%;
@@ -155,10 +161,13 @@ footer {
 }
 .card-image img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 300px;
+  height: auto;
   border-radius: 5px;
   display: block;
+  margin-top: 100px;
+  margin-top: 0;
+
 }
 .card-content {
   padding: 10px;
@@ -179,16 +188,73 @@ footer {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.5s ease, color 0.3s ease,
-    box-shadow 0.7s ease-in-out;
+    box-shadow 0.3s ease-in-out;
   bottom: 10px;
 }
 .card-btn:hover {
-  background-color: #93785f;
-  color: rgb(255, 255, 255);
+  background-color: #9878e9;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.contact{
-  background-color: aqua;
-  padding: 30px;
-  bottom: 100px;
+.contact {
+  background-color: rgb(159, 129, 180);
   margin: 0 auto;
+  margin-top: 30px;
+  background-color: transparent;
+  border: 3px #8860ec dashed;
+  padding: 5px;
+  width: calc(fit-content + 20px);
+  max-width: 300px;
+  border-radius: 10px;
+}
+#heading-gallery {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 80px;
+  margin-bottom: -20px;
+}
+#hero {
+  background: linear-gradient(135deg, #9E8ED0,#9878e9, white);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+#hero h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+#hero p {
+  font-size: 1.0rem;
+  font-weight: 700;
+}
+.scroll-effect {
+  opacity: 0;
+  transform: translateZ(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-effect.in-view {
+  opacity: 1;
+  transform: translateZ(0px);
+}
+.too-big{
+  display: flex;
+  max-width: 50%;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 25%;
 }
