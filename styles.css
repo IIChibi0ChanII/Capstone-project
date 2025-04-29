@@ -19,9 +19,10 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;  /* Ensures it stays on top */
+  z-index: 1000;  
+  box-shadow: 15px 5px 15px rgb(53, 50, 60);
   padding: 4px 10px;
-  background-color: #9E8ED0;
+  background-color: #53119e;
 }
 
 .nav-links {
@@ -31,7 +32,7 @@ html {
 }
 
 .nav-items {
-  color: #3e362e;
+  color: #e3dcff;
   float: left;
   padding: 15px 20px;
   text-decoration: none;
@@ -43,7 +44,10 @@ html {
 
 .nav-items:hover {
   transform: translateY(-2px);
+  color: rgb(186, 186, 186);
+  transition: color 0.4s ease-in-out, transform 0.4s ease ;
 }
+
 main {
   flex: 1;
   padding-top: 50px;
@@ -62,10 +66,12 @@ footer {
 }
 .active {
   color: #333545;
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
   font-weight: bolder;
-  background-color: #8f73d8;
+  background-color: #835be9;
   border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0px;
 }
 .carousel {
   position: relative;
@@ -229,15 +235,15 @@ footer {
   flex-direction: column;
 }
 #hero h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: -2rem;
 }
 #hero h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 20px;
 }
 #hero p {
-  font-size: 1.0rem;
+  font-size: 0.8rem;
   font-weight: 700;
 }
 .scroll-effect {
@@ -257,4 +263,17 @@ footer {
   justify-content: center;
   text-align: center;
   margin-left: 25%;
+}
+.highlighted-name{
+  color: rgb(101, 48, 205);
+}
+#heading-hero{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 80px;
+  font-weight: 500;
+  margin-bottom: -20px;
 }
