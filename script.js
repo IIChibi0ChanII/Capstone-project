@@ -56,3 +56,7 @@ const observer = new IntersectionObserver(
 );
 
 scrollElements.forEach((el) => observer.observe(el));
+
+function goToGithub() {
+  window.location.href = "https://github.com/IIChibi0ChanII";
+}

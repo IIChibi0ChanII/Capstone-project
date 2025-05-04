@@ -15,7 +15,17 @@ html {
   height: 100%;
 }
 .navbar {
-  position: fixed;  /* Keeps navbar at the top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;  
+  box-shadow: 15px 5px 15px rgb(53, 50, 60);
+  padding: 4px 10px;
+  background-color: #53119e;
+}
+.Navbar{
+  position: fixed;  
   top: 0;
   left: 0;
   width: 100%;
@@ -70,6 +80,7 @@ footer {
   font-weight: bolder;
   background-color: #835be9;
   border-radius: 10px;
+  border: none;
   padding: 10px;
   margin: 5px 0px;
 }
@@ -125,6 +136,7 @@ footer {
   gap: 5px;
 }
 .indicator {
+
   width: 12px;
   height: 12px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -132,6 +144,7 @@ footer {
   cursor: pointer;
 }
 .indicator.active {
+    transform:  translateY(-10px);
   background-color: #fff;
 }
 .project-section {
@@ -193,14 +206,14 @@ footer {
   padding: 10px 20px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.5s ease, color 0.3s ease,
-    box-shadow 0.3s ease-in-out;
+  transition: background-color 0.5s ease, color 0.3s ease-in-out;
   bottom: 10px;
 }
 .card-btn:hover {
   background-color: #9878e9;
   color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.8s ease;
 }
 .contact {
   background-color: rgb(159, 129, 180);
@@ -223,7 +236,7 @@ footer {
   margin-bottom: -20px;
 }
 #hero {
-  background: linear-gradient(135deg, #9E8ED0,#9878e9, white);
+  /* background: linear-gradient(135deg, #9878e9, #b9abe6, white); */
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -233,6 +246,21 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  animation:  hero-gradient 3s ease-in-out infinite;
+}
+@keyframes hero-gradient {
+  0% {
+    background: linear-gradient(135deg, #9878e9, #b9abe6, white);
+  }
+  10%{
+    background: linear-gradient(135deg, #8f6ce6, #ad9de4, white);
+  }
+  50%{
+    background: linear-gradient(135deg, #835be7, #9881e4, white);
+  }
+  100% {
+    background: linear-gradient(135deg, #9878e9, #b9abe6, white);
+  }
 }
 #hero h1 {
   font-size: 3rem;
